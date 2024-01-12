@@ -20,7 +20,7 @@ header-includes:
     \vspace{2cm}
     {\Large\itshape Wisecrypt.io\par}
     \vfill
-    {\large \today\par}
+    {\large December 19, 2023\par}
 \end{titlepage}
 
 \maketitle
@@ -28,6 +28,7 @@ header-includes:
 <!-- Your report starts here! -->
 
 Prepared by: [Wisecrypt](https://github.com/aciDrums7)
+
 Lead Security Researcher: 
 - aciDrums7
 
@@ -42,14 +43,14 @@ Lead Security Researcher:
 - [Executive Summary](#executive-summary)
   - [Issues found](#issues-found)
 - [Findings](#findings)
-- [High](#high)
+  - [High](#high)
     - [\[H-1\] Storing the password on-chain makes it visible to anyone, and no longer private](#h-1-storing-the-password-on-chain-makes-it-visible-to-anyone-and-no-longer-private)
     - [\[H-2\] `PasswordStore::setPassword` has no access controls, meaning a non-owner could change the password](#h-2-passwordstoresetpassword-has-no-access-controls-meaning-a-non-owner-could-change-the-password)
-- [Medium](#medium)
-- [Low](#low)
-- [Informational](#informational)
+  - [Medium](#medium)
+  - [Low](#low)
+  - [Informational](#informational)
     - [\[I-1\] The `PasswordStore::getPassword` natspec indicates a parameter that doesn't exist, causing the natspec to be incorrect](#i-1-the-passwordstoregetpassword-natspec-indicates-a-parameter-that-doesnt-exist-causing-the-natspec-to-be-incorrect)
-- [Gas](#gas)
+  - [Gas](#gas)
 
 # Protocol Summary
 
@@ -91,8 +92,6 @@ We use the [CodeHawks](https://docs.codehawks.com/hawks-auditors/how-to-evaluate
 
 # Executive Summary
 
-*Add some notes about how the audit went, types of things you found, etc...*
-*We spent X hours with Z auditors using Y tools. etc...*
 
 ## Issues found
 
@@ -106,7 +105,8 @@ We use the [CodeHawks](https://docs.codehawks.com/hawks-auditors/how-to-evaluate
 
 
 # Findings
-# High
+
+## High
 
 ### [H-1] Storing the password on-chain makes it visible to anyone, and no longer private
 
@@ -198,9 +198,11 @@ if(msg.sender != owner) {
 }
 ```
 
-# Medium
-# Low 
-# Informational
+## Medium
+
+## Low
+
+## Informational
 
 ### [I-1] The `PasswordStore::getPassword` natspec indicates a parameter that doesn't exist, causing the natspec to be incorrect
 
@@ -224,4 +226,4 @@ The `PasswordStore::getPassword` function signature is `getPassword()` while the
 -    * @param newPassword The new password to set.
 ```
 
-# Gas 
+## Gas
